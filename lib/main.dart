@@ -28,7 +28,7 @@ class _HomePageState extends State<HomePage> {
 
   Map nasaData;
   fetchData() async {
-    http.Response response = await http.get("https://api.nasa.gov/planetary/apod/?api_key=CCDSkEabedbq6XNJOQYKuDRQe800nyMWKWGxG7v5&hd=true");
+    http.Response response = await http.get("https://api.nasa.gov/planetary/apod/?api_key={YOUR_API_KEY}&hd=true");
     setState(() {
       nasaData=jsonDecode(response.body);
     });
