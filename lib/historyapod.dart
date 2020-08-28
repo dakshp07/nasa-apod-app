@@ -18,7 +18,7 @@ class _HistoryPageState extends State<HistoryPage> {
 
   Map nasaData;
   fetchData() async {
-    http.Response response = await http.get("https://api.nasa.gov/planetary/apod/?api_key=CCDSkEabedbq6XNJOQYKuDRQe800nyMWKWGxG7v5&date="+widget.date+"&hd=true");
+    http.Response response = await http.get("https://api.nasa.gov/planetary/apod/?api_key={YOUR_API_KEY}&date="+widget.date+"&hd=true");
     setState(() {
       nasaData=jsonDecode(response.body);
     });
